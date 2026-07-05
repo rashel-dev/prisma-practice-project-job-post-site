@@ -1,0 +1,14 @@
+model Job {
+  id          String   @id @default(uuid())
+  title       String
+  company     String
+  location    String
+  type        JobType
+  description String @db.Text
+  salary      String?
+
+  postedAt    DateTime @default(now())
+  postedBy    User @relation("PostedJobs", fields: [postedById], references: [id], onDelete: Cascade)
+  postedById  String
+  applications Application[]
+}
