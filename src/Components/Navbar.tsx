@@ -9,10 +9,13 @@ export default function Navbar() {
         <nav className="bg-white shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
+
+                    {/* left side  */}
                     <div className="flex">
-                        <Logo></Logo>
+                        <Logo />
                     </div>
 
+                    {/* right side */}
                     <div className="flex items-center space-x-4">
                         <Link
                             href="/jobs"
