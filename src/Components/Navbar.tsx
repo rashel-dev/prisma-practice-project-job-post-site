@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import SignOutButton from './SignOutButton';
+import type { Session } from "next-auth";
 
-const session = true;
-
-export default function Navbar() {
+export default function Navbar({ session }: { session: Session | null }) {
     return (
         <nav className="bg-white shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

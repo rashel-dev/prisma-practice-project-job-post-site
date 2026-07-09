@@ -1,8 +1,11 @@
-import React from 'react';
+"use client";
+
+import { signIn } from "next-auth/react";
 
 const GithubButton = () => {
     return (
         <button
+            onClick={() => signIn("github")}
             className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
         >
             <svg

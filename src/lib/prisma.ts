@@ -12,10 +12,10 @@ declare global {
 
 if (!process.env.DATABASE_URL) {
     throw new Error("DATABASE_URL environment variable is not set.");
-}`'`
+}
 
 export const prisma =
-    global.prisma ??     // or i can use globalThis.prisma
+    global.prisma ??     // or use globalThis.prisma
     (() => {
         const pool = new Pool({
             connectionString: process.env.DATABASE_URL,
